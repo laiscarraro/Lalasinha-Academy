@@ -1,9 +1,8 @@
-# Markdown Files
+# O que é um notebook e como usá-lo?
 
-Whether you write your book's content in Jupyter Notebooks (`.ipynb`) or
-in regular markdown files (`.md`), you'll write in the same flavor of markdown
-called **MyST Markdown**.
+As aulas deste curso estão no formato de *notebook*. Um notebook é composto por diversos blocos de conteúdo, chamados de *células*, como esta aqui. As células podem ser compostas por *texto*, como esta, ou por código, como a célula a seguir:
 
+(botar célula de código)
 ## What is MyST?
 
 MyST stands for "Markedly Structured Text". It
