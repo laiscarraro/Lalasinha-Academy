@@ -1,0 +1,7 @@
+print('aaa')
+
+!pip install spacy
+
+import spacy
+import numpy as np
+np.zeros(10)
