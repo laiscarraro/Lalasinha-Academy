@@ -1,16 +1,10 @@
-# Welcome to your Jupyter Book
+# Bem-vinda/o!
 
-This is a small sample book to give you a feel for how book content is
-structured.
+Parabéns por querer aprender a programar, e por tomar a iniciativa! E saiba que python foi uma ótima escolha. Isso porque python:
+- É uma linguagem simples e intuitiva
+- É largamente utilizada em desenvolvimento e em ciência de dados
+- Possui um arsenal imenso de bibliotecas
+- Tem uma comunidade ativa que cresce a cada dia
+- Sua comunidade já criou muito material de apoio (este é um exemplo!)
 
-:::{note}
-Here is a note!
-:::
-
-And here is a code block:
-
-```
-e = mc^2
-```
-
-Check out the content pages bundled with this sample book to see more.
+Este curso foca numa abordagem prática para o aprendizado de conceitos básicos de programação e da linguagem python.
