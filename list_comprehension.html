@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bem-vinda/o! &#8212; Introdução à programação com Python</title>
+    <title>List Comprehension &#8212; Introdução à programação com Python</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="O que é um notebook?" href="markdown.html" />
+    <link rel="next" title="Funções" href="funcoes.html" />
+    <link rel="prev" title="Break e Continue" href="break_continue.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -82,13 +83,13 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
    Bem-vinda/o!
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="markdown.html">
    O que é um notebook?
@@ -159,8 +160,8 @@
    Break e Continue
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="list_comprehension.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    List Comprehension
   </a>
  </li>
@@ -225,7 +226,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/list_comprehension.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -245,7 +246,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/laiscarraro/Lalasinha-Academy/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/laiscarraro/Lalasinha-Academy/issues/new?title=Issue%20on%20page%20%2Flist_comprehension.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -266,7 +267,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/laiscarraro/Lalasinha-Academy/gh-pages?urlpath=tree/https://github.com/laiscarraro/Lalasinha-Academy/Python/intro.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/laiscarraro/Lalasinha-Academy/gh-pages?urlpath=tree/https://github.com/laiscarraro/Lalasinha-Academy/Python/list_comprehension.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -274,7 +275,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/laiscarraro/Lalasinha-Academy/blob/gh-pages/https://github.com/laiscarraro/Lalasinha-Academy/Python/intro.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/laiscarraro/Lalasinha-Academy/blob/gh-pages/https://github.com/laiscarraro/Lalasinha-Academy/Python/list_comprehension.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -299,19 +300,91 @@
         
               <div>
                 
-  <div class="section" id="bem-vinda-o">
-<h1>Bem-vinda/o!<a class="headerlink" href="#bem-vinda-o" title="Permalink to this headline">¶</a></h1>
-<p>Primeiramente, parabéns por querer aprender a programar, e por tomar a iniciativa! E saiba que python foi uma ótima escolha. Isso porque python:</p>
-<ul class="simple">
-<li><p>É uma linguagem simples e intuitiva</p></li>
-<li><p>É largamente utilizada em desenvolvimento e em ciência de dados</p></li>
-<li><p>Possui um arsenal imenso de bibliotecas</p></li>
-<li><p>Tem uma comunidade ativa que cresce a cada dia</p></li>
-<li><p>Sua comunidade já criou muito material de apoio (este é um exemplo!)</p></li>
-</ul>
-<p>Este curso foca numa abordagem prática para o aprendizado de conceitos básicos de programação e da linguagem python. Partimos do pressuposto de que você não sabe programar, porém mesmo que já tenha conhecimento de lógica de programação ou já saiba programar em outra linguagem, este curso pode ser interessante para aprender alguns detalhes interessantes e particularidades da linguagem python.</p>
-<p>Bons estudos!</p>
-<div class="toctree-wrapper compound">
+  <div class="section" id="list-comprehension">
+<h1>List Comprehension<a class="headerlink" href="#list-comprehension" title="Permalink to this headline">¶</a></h1>
+<p>Em python, sempre tem um jeito mais fácil (ou com menos linhas) de se fazer algo. E pra loops isso não é diferente!</p>
+<p>Vamos pensar num exemplo? Temos a lista abaixo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Como faríamos um for para criar outra lista com estes números elevados ao quadrado?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">nums_quadrado</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+  <span class="n">nums_quadrado</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># a função append acrescenta um valor ao final da lista</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">nums_quadrado</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Funciona! Mas 7 linhas é o melhor que podemos fazer? Existe uma forma mais compacta de fazer esse tipo de for, e ela é chamada de <em>list comprehension</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">nums_quadrado</span> <span class="o">=</span> <span class="p">[</span><span class="n">num</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums_quadrado</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+</pre></div>
+</div>
+</div>
+</div>
+<p>E funciona também! Em apenas 3 linhas :)<br />
+Vamos ver mais alguns exemplos?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nomes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;lala&#39;</span><span class="p">,</span> <span class="s1">&#39;lele&#39;</span><span class="p">,</span> <span class="s1">&#39;lili&#39;</span><span class="p">,</span> <span class="s1">&#39;lolo&#39;</span><span class="p">,</span> <span class="s1">&#39;ana paula&#39;</span><span class="p">]</span>
+<span class="n">nomes_tamanho</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">nome</span><span class="p">)</span> <span class="k">for</span> <span class="n">nome</span> <span class="ow">in</span> <span class="n">nomes</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nomes_tamanho</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4, 4, 4, 4, 9]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">potencias</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">dois_potencias</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="o">**</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">potencias</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dois_potencias</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 4, 8, 16, 32, 64]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">potencias</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
+<span class="n">numeros</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">numeros_potencias</span> <span class="o">=</span> <span class="p">[</span><span class="n">numeros</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="n">potencias</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numeros</span><span class="p">))]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numeros_potencias</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 3, 4, 1000, 256, 32, 46656]
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -344,11 +417,20 @@
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="break_continue.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Break e Continue</p>
+            </div>
+        </a>
+    </div>
      <div id="next">
-        <a class="right-next" href="markdown.html" title="next page">
+        <a class="right-next" href="funcoes.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">O que é um notebook?</p>
+                <p class="prevnext-title">Funções</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

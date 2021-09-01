@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bem-vinda/o! &#8212; Introdução à programação com Python</title>
+    <title>Interação com o usuário - função input() &#8212; Introdução à programação com Python</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="O que é um notebook?" href="markdown.html" />
+    <link rel="next" title="Laços com while" href="while.html" />
+    <link rel="prev" title="A função range" href="range.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -82,13 +83,13 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
    Bem-vinda/o!
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="markdown.html">
    O que é um notebook?
@@ -141,8 +142,8 @@
    A função range
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="input.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Interação com o usuário - função
    <em>
     input()
@@ -225,7 +226,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/input.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -245,7 +246,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/laiscarraro/Lalasinha-Academy/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/laiscarraro/Lalasinha-Academy/issues/new?title=Issue%20on%20page%20%2Finput.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -266,7 +267,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/laiscarraro/Lalasinha-Academy/gh-pages?urlpath=tree/https://github.com/laiscarraro/Lalasinha-Academy/Python/intro.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/laiscarraro/Lalasinha-Academy/gh-pages?urlpath=tree/https://github.com/laiscarraro/Lalasinha-Academy/Python/input.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -274,7 +275,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/laiscarraro/Lalasinha-Academy/blob/gh-pages/https://github.com/laiscarraro/Lalasinha-Academy/Python/intro.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/laiscarraro/Lalasinha-Academy/blob/gh-pages/https://github.com/laiscarraro/Lalasinha-Academy/Python/input.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -299,19 +300,97 @@
         
               <div>
                 
-  <div class="section" id="bem-vinda-o">
-<h1>Bem-vinda/o!<a class="headerlink" href="#bem-vinda-o" title="Permalink to this headline">¶</a></h1>
-<p>Primeiramente, parabéns por querer aprender a programar, e por tomar a iniciativa! E saiba que python foi uma ótima escolha. Isso porque python:</p>
-<ul class="simple">
-<li><p>É uma linguagem simples e intuitiva</p></li>
-<li><p>É largamente utilizada em desenvolvimento e em ciência de dados</p></li>
-<li><p>Possui um arsenal imenso de bibliotecas</p></li>
-<li><p>Tem uma comunidade ativa que cresce a cada dia</p></li>
-<li><p>Sua comunidade já criou muito material de apoio (este é um exemplo!)</p></li>
-</ul>
-<p>Este curso foca numa abordagem prática para o aprendizado de conceitos básicos de programação e da linguagem python. Partimos do pressuposto de que você não sabe programar, porém mesmo que já tenha conhecimento de lógica de programação ou já saiba programar em outra linguagem, este curso pode ser interessante para aprender alguns detalhes interessantes e particularidades da linguagem python.</p>
-<p>Bons estudos!</p>
-<div class="toctree-wrapper compound">
+  <div class="section" id="interacao-com-o-usuario-funcao-input">
+<h1>Interação com o usuário - função <em>input()</em><a class="headerlink" href="#interacao-com-o-usuario-funcao-input" title="Permalink to this headline">¶</a></h1>
+<p>Se você já usou algum programa, já percebeu que é muito comum o programa pedir dados do usuário, sem que ele tenha que inserí-los diretamente no código. Exemplos disso são formulários, textos de redes sociais, ou até mesmo os códigos que nós escrevemos no colab! Mas como fazer isso em Python?</p>
+<p>Temos a seguinte função:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">input</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>O que ela faz é simplemente pegar um string de tamanho qualquer que o usuário digitar. Teste na célula abaixo!</p>
+<p>Mas cuidado! Essa função retorna apenas STRINGS, ou seja, mesmo que você peça para o usuário escrever um número, o retorno da função vai ser uma string. Por exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cateto_a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;digite o cateto a: &#39;</span><span class="p">)</span>
+<span class="n">cateto_b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;digite o cateto b: &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A hipotenusa é &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">cateto_a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">cateto_b</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>digite o cateto a: 10
+digite o cateto b: 10
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-4-887ca0dae93d&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">cateto_a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;digite o cateto a: &#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">cateto_b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;digite o cateto b: &#39;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A hipotenusa é &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">cateto_a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">cateto_b</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="ne">TypeError</span>: unsupported operand type(s) for ** or pow(): &#39;str&#39; and &#39;int&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos corrigir usando uma conversão de tipo para inteiro:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cateto_a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;digite o cateto a: &#39;</span><span class="p">))</span>
+<span class="n">cateto_b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;digite o cateto b: &#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A hipotenusa é &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">cateto_a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">cateto_b</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>digite o cateto a: 10
+digite o cateto b: 10
+A hipotenusa é 200
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">input</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>alkjdaskljd
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;alkjdaskljd&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Legal, né? Podemos, também, armazená-la numa variável para poder manipular esse input de diversas formas:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nome</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Oi, &#39;</span> <span class="o">+</span> <span class="n">nome</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>laís
+Oi, laís!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Já viu como nos formulários existem indicações do que você deve preencher em cada campo? Podemos fazer isso aqui também! É só passar para a função input uma string com a mensagem que você quer mostrar para o seu usuário :)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nome</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Digite seu nome: &#39;</span><span class="p">)</span>
+<span class="n">altura</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Digite sua altura: &#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Seu nome é &#39;</span> <span class="o">+</span> <span class="n">nome</span> <span class="o">+</span> <span class="s1">&#39; e você mede &#39;</span> <span class="o">+</span> <span class="n">altura</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -344,11 +423,20 @@
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="range.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">A função range</p>
+            </div>
+        </a>
+    </div>
      <div id="next">
-        <a class="right-next" href="markdown.html" title="next page">
+        <a class="right-next" href="while.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">O que é um notebook?</p>
+                <p class="prevnext-title">Laços com while</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

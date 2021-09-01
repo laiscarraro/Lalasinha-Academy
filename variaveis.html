@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bem-vinda/o! &#8212; Introdução à programação com Python</title>
+    <title>Variáveis &#8212; Introdução à programação com Python</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="O que é um notebook?" href="markdown.html" />
+    <link rel="next" title="Conversão de tipos (cast)" href="cast.html" />
+    <link rel="prev" title="Tipos de dados" href="tipos_de_dados.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -82,13 +83,13 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
    Bem-vinda/o!
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="markdown.html">
    O que é um notebook?
@@ -99,8 +100,8 @@
    Tipos de dados
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="variaveis.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Variáveis
   </a>
  </li>
@@ -225,7 +226,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/variaveis.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -245,7 +246,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/laiscarraro/Lalasinha-Academy/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/laiscarraro/Lalasinha-Academy/issues/new?title=Issue%20on%20page%20%2Fvariaveis.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -266,7 +267,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/laiscarraro/Lalasinha-Academy/gh-pages?urlpath=tree/https://github.com/laiscarraro/Lalasinha-Academy/Python/intro.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/laiscarraro/Lalasinha-Academy/gh-pages?urlpath=tree/https://github.com/laiscarraro/Lalasinha-Academy/Python/variaveis.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -274,7 +275,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/laiscarraro/Lalasinha-Academy/blob/gh-pages/https://github.com/laiscarraro/Lalasinha-Academy/Python/intro.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/laiscarraro/Lalasinha-Academy/blob/gh-pages/https://github.com/laiscarraro/Lalasinha-Academy/Python/variaveis.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -291,6 +292,29 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Variáveis
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quais-nomes-sao-possiveis">
+   Quais nomes são possíveis?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dicas">
+   Dicas
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -299,19 +323,88 @@
         
               <div>
                 
-  <div class="section" id="bem-vinda-o">
-<h1>Bem-vinda/o!<a class="headerlink" href="#bem-vinda-o" title="Permalink to this headline">¶</a></h1>
-<p>Primeiramente, parabéns por querer aprender a programar, e por tomar a iniciativa! E saiba que python foi uma ótima escolha. Isso porque python:</p>
+  <div class="section" id="variaveis">
+<h1>Variáveis<a class="headerlink" href="#variaveis" title="Permalink to this headline">¶</a></h1>
+<p>Explicando o que são variáveis.</p>
+</div>
+<div class="section" id="quais-nomes-sao-possiveis">
+<h1>Quais nomes são possíveis?<a class="headerlink" href="#quais-nomes-sao-possiveis" title="Permalink to this headline">¶</a></h1>
+<p>Existem algumas regras para nomeação de variáveis:</p>
 <ul class="simple">
-<li><p>É uma linguagem simples e intuitiva</p></li>
-<li><p>É largamente utilizada em desenvolvimento e em ciência de dados</p></li>
-<li><p>Possui um arsenal imenso de bibliotecas</p></li>
-<li><p>Tem uma comunidade ativa que cresce a cada dia</p></li>
-<li><p>Sua comunidade já criou muito material de apoio (este é um exemplo!)</p></li>
+<li><p>Não podem ser <strong>palavras reservadas</strong> da liguagem (que têm significados predefinidos)</p></li>
+<li><p>Não podem começar com números (pode até conter, mas não no primeiro caracter)</p></li>
+<li><p>Não podem conter .,#$%&amp;!”&#64;()[]*{};:?’|/\ pois todos esses caracteres têm outros significados</p></li>
+<li><p>Até podem conter acentuação (´, `, ^, ~) ou ‘ç’, mas melhor não (tem potencial de dar ruim)</p></li>
+<li><p>Podemos chamar nossas variáveis com mais de uma palavra (geralmente 2 ou 3, pois mais que isso fica muito confuso), mas não podemos separá-las por espaço.</p></li>
 </ul>
-<p>Este curso foca numa abordagem prática para o aprendizado de conceitos básicos de programação e da linguagem python. Partimos do pressuposto de que você não sabe programar, porém mesmo que já tenha conhecimento de lógica de programação ou já saiba programar em outra linguagem, este curso pode ser interessante para aprender alguns detalhes interessantes e particularidades da linguagem python.</p>
-<p>Bons estudos!</p>
-<div class="toctree-wrapper compound">
+<p>Algumas alternativas comuns para separar as palavras sem espaço:</p>
+<ul class="simple">
+<li><p><strong>Camel case</strong>: a primeira letra de cada palavra, <em>com exceção da primeira</em>, é escrita em letra maiúscula. Exemplos:</p>
+<ul>
+<li><p>mediaPonderada</p></li>
+<li><p>numDeEntradas</p></li>
+<li><p>primeiraPalavra</p></li>
+</ul>
+</li>
+<li><p><strong>Snake case</strong>: as palavras são separadas por underscores (_) ao invés de espaços. O mais comum em python! Exemplos:</p>
+<ul>
+<li><p>numero_casas</p></li>
+<li><p>idade_pessoa</p></li>
+<li><p>tipo_lista</p></li>
+</ul>
+</li>
+</ul>
+<p>Outros nomes válidos de variáveis:</p>
+<ul class="simple">
+<li><p>numeroA</p></li>
+<li><p>numero1</p></li>
+<li><p>t1</p></li>
+<li><p>teste_1234</p></li>
+<li><p>tesTe12A3</p></li>
+<li><p>lalalalalalalalalalalalalalalalalala</p></li>
+</ul>
+</div>
+<div class="section" id="dicas">
+<h1>Dicas<a class="headerlink" href="#dicas" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Tente não deixar suas variáveis com um nome muito grande (tipo essa última, ou com o tamanho de uma frase, por exemplo), pois vai ser chato escrever o nome dela várias vezes depois.</p></li>
+<li><p>Tente não deixar os nomes muito pequenos também (a, i, j, k, t1, t2, t3, etc.) porque com 3 ou mais variáveis você com certeza vai se perder.</p></li>
+<li><p>Para facilitar, dê nomes intuitivos e sucintos para suas variáveis, assim vai ser muito mais fácil de lembrar e você não vai precisar ficar voltando na definição de variávies toda hora.</p></li>
+<li><p>Outra dica é manter um padrão na definição de variáveis. Se usou snake_case em uma, não use camelCase em outras. Evite misturar cases.</p></li>
+<li><p>A última dica é definir suas variáveis num mesmo lugar (quando fizer sentido) do código. É sempre bom ter um “cantinho das variáveis” para saber onde voltar se precisar.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Qual vai dar erro?</span>
+
+<span class="n">meu_nome</span> <span class="o">=</span> <span class="s1">&#39;laís&#39;</span>
+<span class="n">nomeJuliana</span> <span class="o">=</span> <span class="s1">&#39;juliana&#39;</span>
+<span class="mi">1</span><span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;um nome&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span># Qual vai dar erro?
+
+nOmezZInHOHHH = &#39;nomezinho&#39;
+dinheiro$ = 10
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa = &#39;1&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Qual vai dar erro?</span>
+
+<span class="kc">True</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">definindo</span> <span class="o">=</span> <span class="mi">231</span>
+<span class="n">int_def</span> <span class="o">=</span> <span class="s1">&#39;inteiro&#39;</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -344,11 +437,20 @@
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="tipos_de_dados.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Tipos de dados</p>
+            </div>
+        </a>
+    </div>
      <div id="next">
-        <a class="right-next" href="markdown.html" title="next page">
+        <a class="right-next" href="cast.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">O que é um notebook?</p>
+                <p class="prevnext-title">Conversão de tipos (<em>cast</em>)</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

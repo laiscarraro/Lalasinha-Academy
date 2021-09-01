@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bem-vinda/o! &#8212; Introdução à programação com Python</title>
+    <title>Listas &#8212; Introdução à programação com Python</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="O que é um notebook?" href="markdown.html" />
+    <link rel="next" title="Expressões lógicas" href="expressoes_logicas.html" />
+    <link rel="prev" title="Conversão de tipos (cast)" href="cast.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -82,13 +83,13 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
    Bem-vinda/o!
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="markdown.html">
    O que é um notebook?
@@ -113,8 +114,8 @@
    )
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="listas.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Listas
   </a>
  </li>
@@ -225,7 +226,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/listas.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -245,7 +246,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/laiscarraro/Lalasinha-Academy/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/laiscarraro/Lalasinha-Academy/issues/new?title=Issue%20on%20page%20%2Flistas.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -266,7 +267,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/laiscarraro/Lalasinha-Academy/gh-pages?urlpath=tree/https://github.com/laiscarraro/Lalasinha-Academy/Python/intro.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/laiscarraro/Lalasinha-Academy/gh-pages?urlpath=tree/https://github.com/laiscarraro/Lalasinha-Academy/Python/listas.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -274,7 +275,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/laiscarraro/Lalasinha-Academy/blob/gh-pages/https://github.com/laiscarraro/Lalasinha-Academy/Python/intro.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/laiscarraro/Lalasinha-Academy/blob/gh-pages/https://github.com/laiscarraro/Lalasinha-Academy/Python/listas.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -299,19 +300,76 @@
         
               <div>
                 
-  <div class="section" id="bem-vinda-o">
-<h1>Bem-vinda/o!<a class="headerlink" href="#bem-vinda-o" title="Permalink to this headline">¶</a></h1>
-<p>Primeiramente, parabéns por querer aprender a programar, e por tomar a iniciativa! E saiba que python foi uma ótima escolha. Isso porque python:</p>
+  <div class="section" id="listas">
+<h1>Listas<a class="headerlink" href="#listas" title="Permalink to this headline">¶</a></h1>
+<p>Vamos ver mais sobre listas mais adiante, mas por enquanto vamos nos preocupar em acessar itens específicos da lista. Esse tipo de conjunto pode ter vários nomes:</p>
 <ul class="simple">
-<li><p>É uma linguagem simples e intuitiva</p></li>
-<li><p>É largamente utilizada em desenvolvimento e em ciência de dados</p></li>
-<li><p>Possui um arsenal imenso de bibliotecas</p></li>
-<li><p>Tem uma comunidade ativa que cresce a cada dia</p></li>
-<li><p>Sua comunidade já criou muito material de apoio (este é um exemplo!)</p></li>
+<li><p>Listas</p></li>
+<li><p>Arranjos</p></li>
+<li><p>Arrays (arranjos em inglês)</p></li>
+<li><p>Vetores</p></li>
 </ul>
-<p>Este curso foca numa abordagem prática para o aprendizado de conceitos básicos de programação e da linguagem python. Partimos do pressuposto de que você não sabe programar, porém mesmo que já tenha conhecimento de lógica de programação ou já saiba programar em outra linguagem, este curso pode ser interessante para aprender alguns detalhes interessantes e particularidades da linguagem python.</p>
-<p>Bons estudos!</p>
-<div class="toctree-wrapper compound">
+<p>Um detalhe importante sobre listas é que os seus índices sempre começam em 0. Por isso, uma lista com 10 elementos, por exemplo, terá do índice 0 até o índice 9 (0 a 9 são 10 elementos). Tente descobrir quantos elementos tem as seguintes listas:</p>
+<ul class="simple">
+<li><p>Uma lista que vai de 0 a 10</p></li>
+<li><p>Uma que vai de 0 a 99</p></li>
+<li><p>E outra que vai de 0 a 14</p></li>
+</ul>
+<p>Fácil, não? E você saberia fazer o contrário? Diga quais são os índices para as listas abaixo:</p>
+<ul class="simple">
+<li><p>Uma lista com 20 elementos</p></li>
+<li><p>Uma com 18</p></li>
+<li><p>E outra com 99</p></li>
+</ul>
+<p>Agora, vamos praticar acessar índices específicos das listas abaixo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># a lista abaixo representa o numero de </span>
+<span class="c1"># filmes que você viu por mês durante o ano de 2020.</span>
+<span class="n">filmes_por_mes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># armazene na variável abaixo o número </span>
+<span class="c1"># de filmes assistidos no primeiro mês do ano.</span>
+<span class="n">primeiro_mes</span> <span class="o">=</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">primeiro_mes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># agora, o número de filmes </span>
+<span class="c1"># assistidos em dezembro.</span>
+<span class="n">dezembro</span> <span class="o">=</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">dezembro</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># qual o número de filmes assistidos </span>
+<span class="c1"># de junho a agosto? (complete)</span>
+<span class="n">junho_a_agosto</span> <span class="o">=</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">junho_a_agosto</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># qual a diferença entre o número de filmes </span>
+<span class="c1"># assistidos em maio e em setembro? (complete)</span>
+<span class="n">dif_maio_setembro</span> <span class="o">=</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">dif_maio_setembro</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -344,11 +402,20 @@
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="cast.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Conversão de tipos (<em>cast</em>)</p>
+            </div>
+        </a>
+    </div>
      <div id="next">
-        <a class="right-next" href="markdown.html" title="next page">
+        <a class="right-next" href="expressoes_logicas.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">O que é um notebook?</p>
+                <p class="prevnext-title">Expressões lógicas</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

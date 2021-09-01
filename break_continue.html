@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bem-vinda/o! &#8212; Introdução à programação com Python</title>
+    <title>Break e Continue &#8212; Introdução à programação com Python</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="O que é um notebook?" href="markdown.html" />
+    <link rel="next" title="List Comprehension" href="list_comprehension.html" />
+    <link rel="prev" title="Laços com while" href="while.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -82,13 +83,13 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
    Bem-vinda/o!
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="markdown.html">
    O que é um notebook?
@@ -154,8 +155,8 @@
    Laços com while
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="break_continue.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Break e Continue
   </a>
  </li>
@@ -225,7 +226,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/break_continue.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -245,7 +246,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/laiscarraro/Lalasinha-Academy/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/laiscarraro/Lalasinha-Academy/issues/new?title=Issue%20on%20page%20%2Fbreak_continue.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -266,7 +267,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/laiscarraro/Lalasinha-Academy/gh-pages?urlpath=tree/https://github.com/laiscarraro/Lalasinha-Academy/Python/intro.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/laiscarraro/Lalasinha-Academy/gh-pages?urlpath=tree/https://github.com/laiscarraro/Lalasinha-Academy/Python/break_continue.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -274,7 +275,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/laiscarraro/Lalasinha-Academy/blob/gh-pages/https://github.com/laiscarraro/Lalasinha-Academy/Python/intro.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/laiscarraro/Lalasinha-Academy/blob/gh-pages/https://github.com/laiscarraro/Lalasinha-Academy/Python/break_continue.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -299,20 +300,70 @@
         
               <div>
                 
-  <div class="section" id="bem-vinda-o">
-<h1>Bem-vinda/o!<a class="headerlink" href="#bem-vinda-o" title="Permalink to this headline">¶</a></h1>
-<p>Primeiramente, parabéns por querer aprender a programar, e por tomar a iniciativa! E saiba que python foi uma ótima escolha. Isso porque python:</p>
-<ul class="simple">
-<li><p>É uma linguagem simples e intuitiva</p></li>
-<li><p>É largamente utilizada em desenvolvimento e em ciência de dados</p></li>
-<li><p>Possui um arsenal imenso de bibliotecas</p></li>
-<li><p>Tem uma comunidade ativa que cresce a cada dia</p></li>
-<li><p>Sua comunidade já criou muito material de apoio (este é um exemplo!)</p></li>
-</ul>
-<p>Este curso foca numa abordagem prática para o aprendizado de conceitos básicos de programação e da linguagem python. Partimos do pressuposto de que você não sabe programar, porém mesmo que já tenha conhecimento de lógica de programação ou já saiba programar em outra linguagem, este curso pode ser interessante para aprender alguns detalhes interessantes e particularidades da linguagem python.</p>
-<p>Bons estudos!</p>
-<div class="toctree-wrapper compound">
+  <div class="section" id="break-e-continue">
+<h1>Break e Continue<a class="headerlink" href="#break-e-continue" title="Permalink to this headline">¶</a></h1>
+<p>Vamos supor que queremos construir um chatbot que pare de conversar quando o usuário escreve “tchau”. Podemos fazer isso de algumas formas diferentes. Primeiro, vamos ver como faríamos apenas com as ferramentas que já temos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">resp</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="k">while</span> <span class="n">resp</span> <span class="o">!=</span> <span class="s1">&#39;tchau&#39;</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Oi, eu sou um chatbot, e vc?&#39;</span><span class="p">)</span>
+  <span class="n">resp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tchau!&#39;</span><span class="p">)</span>
+</pre></div>
 </div>
+</div>
+</div>
+<p>Mas podemos também usar uma palavra especial chamada <em>break</em>. O <em>break</em> faz com que o loop termine imediatamente, sem executar mais nada dentro do loop (mas abaixo ainda executa!):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">resp</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Oi, eu sou um chatbot, e vc?&#39;</span><span class="p">)</span>
+  <span class="n">resp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()]</span>
+  <span class="k">if</span> <span class="n">resp</span> <span class="o">==</span> <span class="s1">&#39;tchau&#39;</span><span class="p">:</span>
+    <span class="k">break</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tchau!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>(perceba como ele ainda imprime o ‘tchau’ do final)</p>
+<p>Vamos supor que, ainda nesse mesmo chatbot, queremos que ele “ignore” algumas respostas do usuário. Por exemplo, digamos que queremos que o chatbot ignore a palavra “sim”. Como faríamos isso? Podemos até tentar deixar o elif sem nada, mas será que vai dar certo?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">resp</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Oi, eu sou um chatbot, e vc?&#39;</span><span class="p">)</span>
+  <span class="n">resp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+  <span class="k">if</span> <span class="n">resp</span> <span class="o">==</span> <span class="s1">&#39;tchau&#39;</span><span class="p">:</span>
+    <span class="k">break</span>
+  <span class="k">elif</span> <span class="n">resp</span> <span class="o">==</span> <span class="s1">&#39;sim&#39;</span><span class="p">:</span>
+    <span class="c1"># não fazer nada</span>
+<span class="c1">#print(&#39;Tchau!&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ih! dá um erro. Então como será que a gente faz pra que ele ignore alguma parte do código? Usamos a palavra <em>continue</em>. Assim como no <em>break</em>, tudo depois do <em>continue</em> e dentro do loop é ignorado. No entanto, ao invés de sair do loop, o <em>continue</em> volta para o começo do laço de novo.</p>
+<p>OBS.: Vamos adicionar uma resposta “imediata” do chatbot (“Legal!”) para que dê pra notar quanto ele ignorar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">resp</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Oi, eu sou um chatbot, e vc?&#39;</span><span class="p">)</span>
+  <span class="n">resp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+  <span class="k">if</span> <span class="n">resp</span> <span class="o">==</span> <span class="s1">&#39;tchau&#39;</span><span class="p">:</span>
+    <span class="k">break</span>
+  <span class="k">elif</span> <span class="n">resp</span> <span class="o">==</span> <span class="s1">&#39;sim&#39;</span><span class="p">:</span>
+    <span class="k">continue</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Legal!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tchau!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>OBS.: Usamos essas palavrinhas especiais só no while, mas dá pra usar no for também :)</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -344,11 +395,20 @@
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="while.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Laços com while</p>
+            </div>
+        </a>
+    </div>
      <div id="next">
-        <a class="right-next" href="markdown.html" title="next page">
+        <a class="right-next" href="list_comprehension.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">O que é um notebook?</p>
+                <p class="prevnext-title">List Comprehension</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bem-vinda/o! &#8212; Introdução à programação com Python</title>
+    <title>Laços com while &#8212; Introdução à programação com Python</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="O que é um notebook?" href="markdown.html" />
+    <link rel="next" title="Break e Continue" href="break_continue.html" />
+    <link rel="prev" title="Interação com o usuário - função input()" href="input.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -82,13 +83,13 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
    Bem-vinda/o!
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="markdown.html">
    O que é um notebook?
@@ -149,8 +150,8 @@
    </em>
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="while.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Laços com while
   </a>
  </li>
@@ -225,7 +226,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/while.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -245,7 +246,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/laiscarraro/Lalasinha-Academy/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/laiscarraro/Lalasinha-Academy/issues/new?title=Issue%20on%20page%20%2Fwhile.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -266,7 +267,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/laiscarraro/Lalasinha-Academy/gh-pages?urlpath=tree/https://github.com/laiscarraro/Lalasinha-Academy/Python/intro.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/laiscarraro/Lalasinha-Academy/gh-pages?urlpath=tree/https://github.com/laiscarraro/Lalasinha-Academy/Python/while.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -274,7 +275,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/laiscarraro/Lalasinha-Academy/blob/gh-pages/https://github.com/laiscarraro/Lalasinha-Academy/Python/intro.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/laiscarraro/Lalasinha-Academy/blob/gh-pages/https://github.com/laiscarraro/Lalasinha-Academy/Python/while.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -299,19 +300,138 @@
         
               <div>
                 
-  <div class="section" id="bem-vinda-o">
-<h1>Bem-vinda/o!<a class="headerlink" href="#bem-vinda-o" title="Permalink to this headline">¶</a></h1>
-<p>Primeiramente, parabéns por querer aprender a programar, e por tomar a iniciativa! E saiba que python foi uma ótima escolha. Isso porque python:</p>
-<ul class="simple">
-<li><p>É uma linguagem simples e intuitiva</p></li>
-<li><p>É largamente utilizada em desenvolvimento e em ciência de dados</p></li>
-<li><p>Possui um arsenal imenso de bibliotecas</p></li>
-<li><p>Tem uma comunidade ativa que cresce a cada dia</p></li>
-<li><p>Sua comunidade já criou muito material de apoio (este é um exemplo!)</p></li>
-</ul>
-<p>Este curso foca numa abordagem prática para o aprendizado de conceitos básicos de programação e da linguagem python. Partimos do pressuposto de que você não sabe programar, porém mesmo que já tenha conhecimento de lógica de programação ou já saiba programar em outra linguagem, este curso pode ser interessante para aprender alguns detalhes interessantes e particularidades da linguagem python.</p>
-<p>Bons estudos!</p>
-<div class="toctree-wrapper compound">
+  <div class="section" id="lacos-com-while">
+<h1>Laços com while<a class="headerlink" href="#lacos-com-while" title="Permalink to this headline">¶</a></h1>
+<p>Agora que sabemos vários loops, podemos brincar com várias tarefas repetitivas. Vamos supor que você queira criar um chatbot, assim como o chatbot abaixo (para terminar a conversa é só escrever “tchau”).</p>
+<p>Em muitos casos, como esse, em que sabemos que nossa contagem será sempre de i até 0, podemos transformar o nosso laço <em>while</em> em um for:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Feliz ano novo!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10!
+9!
+8!
+7!
+6!
+5!
+4!
+3!
+2!
+1!
+Feliz ano novo!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Porém, uma coisa a se notar é que no while precisamos deixar explícito o <em>incremento</em> da nossa variável. Por isso, precisamos da linha abaixo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>O que acontece se nos esquecermos dessa linha?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Chatbot (código ultra secreto)</span>
+<span class="n">nome</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Oi! Qual é o seu nome?</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="n">nome</span> <span class="o">!=</span> <span class="s1">&#39;tchau&#39;</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Que legal! O que é &#39;</span> <span class="o">+</span> <span class="n">nome</span> <span class="o">+</span> <span class="s1">&#39;?&#39;</span><span class="p">)</span>
+  <span class="n">nome</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Oi! Qual é o seu nome?
+tchau
+</pre></div>
+</div>
+</div>
+</div>
+<p>Legal, vamos estruturar nosso for! Quantas vezes ele vai rodar?</p>
+<p>Temos um pequeno problema: nós <em>não sabemos</em>! Neste contexto, o usuário pode escrever um número indefinido de mensagens, e não conseguimos estruturar um for sem saber o número exato de vezes que ele deve rodar, seja com um número na função range, seja com o tamanho de uma lista.</p>
+<p>Para esses casos, quando não sabemos o número definido de vezes que nosso loop deverá rodar, temos o loop <em>while</em>. Veja abaixo um pequeno exemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+  <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Feliz ano novo!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10!
+9!
+8!
+7!
+6!
+5!
+4!
+3!
+2!
+1!
+Feliz ano novo!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Feliz ano novo!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Entramos aqui num problema que nunca tivemos com os laços for: o <em>loop infinito</em>. Como o while roda um número indefinido de vezes, se ele nunca chegar na sua <em>condição de parada</em> (a condição do while), nós vamos executar o código no while infinitamente!</p>
+<p>Obs.: Em alguns casos, isso é até o que queremos, mas isso fica pra outra aula :)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Evite um loop infinito!</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">:</span>
+  <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bem me quer&#39;</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mal me quer&#39;</span><span class="p">)</span>
+  <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Evite um loop infinito!</span>
+<span class="n">finalizado</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="n">finalizado</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ta finalizado?&#39;</span><span class="p">)</span>
+  <span class="n">resposta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+  <span class="k">if</span> <span class="n">resposta</span> <span class="o">==</span> <span class="s1">&#39;sim&#39;</span><span class="p">:</span>
+    <span class="n">finalizado</span> <span class="o">=</span> <span class="kc">True</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">finalizado</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Evite um loop infinito!</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;0 é menor que 10&#39;</span><span class="p">)</span>
+  <span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;0 ainda é menor que 10 mas o loop acabou&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -344,11 +464,20 @@
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="input.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Interação com o usuário - função <em>input()</em></p>
+            </div>
+        </a>
+    </div>
      <div id="next">
-        <a class="right-next" href="markdown.html" title="next page">
+        <a class="right-next" href="break_continue.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">O que é um notebook?</p>
+                <p class="prevnext-title">Break e Continue</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
