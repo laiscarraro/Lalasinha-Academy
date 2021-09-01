@@ -1,0 +1,90 @@
+lista_repetida = ['banana', 'tapioca', 'banana', 'banana', 'ovo', 'cuscuz', 'lentilha', 'banana']
+print(lista_repetida)
+conjunto = set(lista_repetida)
+print(conjunto)
+lista_sem_repeticao = list(conjunto)
+print(lista_sem_repeticao)
+
+conjunto = {'a', 'b', 'c', 'd', 'e'}
+print(conjunto)
+
+conjunto[0]
+
+a = {1, 2, 3, 4, 5}
+b = {2, 3, 6, 8, 9, 0, 5}
+print(a.intersection(b))
+
+nome_dos_animais = ['Alce', 'Hipopótamo', 'Dinossauro', 'Arara', 'Antílope', 'Mamute', 'Pato', 'Tartaruga', 'Girafa', 'Jararaca', 'Lobo']
+qtd_no_zoo = [12, 15, 0, 63, 23, 0, 512, 53, 37, 48, 2]
+
+# Suponha que queremos encontrar a posição (ou seja, o ÍNDICE) do elemento 'Tartaruga' dentro da lista acima, para depois ver sua quantidade no zoo:
+
+indice = 0
+for i in range(len(nome_dos_animais)): # temos que percorrer todos os itens da lista até encontrar o elemento 'Tartaruga'
+  if nome_dos_animais[i] == 'Tartaruga':
+    indice = i
+print(indice)
+print('Quantidade de tartarugas no zoo: ' + str(qtd_no_zoo[indice])) # Podemos, então, usar o índice para procurar na lista de quantidades
+print()
+
+# Existe uma função que faz isso. ATENÇÃO!!!! Ela faz a mesma coisa que fizemos ali em cima!!! Não é mais eficiente!!!
+print(nome_dos_animais.index('Tartaruga'))
+print('Quantidade de tartarugas no zoo: ' + str(qtd_no_zoo[nome_dos_animais.index('Tartaruga')]))
+
+animais = {nome_dos_animais[i]: qtd_no_zoo[i] for i in range(len(nome_dos_animais))}
+animais
+
+animais = {
+    'Alce': 12,
+    'Hipopótamo': 15,
+    'Dinossauro': 0,
+    'Arara': 63,
+    'Antílope': 23,
+    'Mamute': 0,
+    'Pato': 512,
+    'Tartaruga': 53,
+    'Girafa': 37,
+    'Jararaca': 48,
+    'Lobo': 2
+}
+
+print(animais.keys())
+print(animais.values())
+
+print('Quantidade de tartarugas no zoo: ' + str(animais['Tartaruga']))
+
+for animal in animais.keys():
+  print('Quantidade de ' + animal + 's no zoo: ' + str(animais[animal]))
+
+# Percorra o conjunto abaixo e imprima seus elementos:
+conj = {1234, 110984, 5192, 5092, 14872, 4112, 5904, 5150, 5783, 394}
+
+for c in conj:
+  print(c)
+
+# Imprima a união dos dois conjuntos a seguir:
+a = {'banana', 'banana nanica', 'banana verde', 'banana maçã', 'banana prata'}
+b = {'maçã', 'maçã verde', 'maçã verde verde', 'maçã normal verde'}
+
+print(a.union(b))
+
+# Imprima o valor no dicionário abaixo com a chave 5:
+musicas = {
+    12: 'alecrim, alecrim dourado',
+    20: 'se essa rua, se essa rua fosse minha',
+    0: 'nana nenê que a cuca vem pegar',
+    5: 'cabeça, ombro, joelho e pé (joelho e pé!)',
+    10: 'dirigindo meu carro, dirigindo meu carro, eu vou à praia dirigindo o meu carro'
+}
+
+print(musicas[10])
+
+# Percorra o dicionário abaixo e imprima seus elementos no formato "chave: valor"
+dicionario = {
+    'Luminária': 'Móvel que ilumina a casa',
+    'Cachorro': 'Bichinho de estimação',
+    'Boneca': 'Brinquedo de crianças que simula uma pessoa',
+    'Batata': 'Tubérculo que fica muito bom em qualquer coisa'
+}
+
+[i+': '+dicionario[i] for i in dicionario]

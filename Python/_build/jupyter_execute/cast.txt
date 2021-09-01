@@ -1,0 +1,26 @@
+idade = 21
+print('Eu tenho ' + idade + ' anos.')
+
+idade = '21'
+print('Eu tenho ' + idade + ' anos.')
+
+idade = 21
+print('Eu tenho ' + idade + ' anos.')
+
+# Corrija o código abaixo
+
+soma = 10 + '13.2'
+print(soma)
+
+# Corrija o código abaixo
+
+mensagem = 'Você fez ' + 123 + ' pontos!'
+print(mensagem)
+
+# Corrija o código abaixo
+
+a = 12
+b = 'testes'
+c = 'eu fiz ' + a + ' ' + b
+
+print(c)

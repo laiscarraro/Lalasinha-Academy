@@ -1,0 +1,40 @@
+nomes = ['Lais', 'Melissa', 'Shrek', 'Shakira']
+
+print('Meu nome é ' + nomes[0])
+print('Meu nome é ' + nomes[1])
+print('Meu nome é ' + nomes[2])
+print('Meu nome é ' + nomes[3])
+
+nomes = ['Lais', 'Melissa', 'Shrek', 'Shakira', 'Mariana', 'Miriam', 'Mell', 'Adriano', 'Cristiana', 'Paula', 'Sophia', 'Josué', 'Adailson', 
+'Tatiane', 'Gabriela', 'Thiago', 'Bruna', 'Anna', 'Rosângela', 'Rodrigo', 'Fátima', 'Claudia', 'Iago', 'Cassandra']
+
+for nome in nomes:
+  print('Meu nome é ' + nome)
+
+# Complete o código!
+
+alfabeto = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+for ____ in alfabeto:
+  print(____)
+
+# Complete o código!
+
+idades = [10, 20, 30, 40, 50]
+soma = 0
+
+for ___ in ___:
+  soma = _________
+
+print(soma)
+
+# Complete o código!
+
+numeros = [1, 5, 200, 8, 10, 481902, 131, 537189, 471983712, 31731, 473283971, 4198371, 1327131, 49719831, 789372189]
+maior = 0
+
+for numero in ____:
+  if ____ > maior:
+    ____ = numero
+
+print(maior)

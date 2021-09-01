@@ -1,0 +1,33 @@
+type(2)
+#type('abacaxi')
+#type('3')
+#type(False)
+#type(2.3)
+#type(int)
+
+24748329
+type(24748329)
+
+#13132.0
+#type(13132.0)
+
+#'dois'
+#type('dois')
+
+#False
+#type(False)
+
+#"312.042"
+#type("312.042")
+
+#32.0000
+#type(32.0000)
+
+#False or True or False and False
+#type(False or True or False and False)
+
+#"True or False"
+#type("True or False")
+
+#str
+#type(str)

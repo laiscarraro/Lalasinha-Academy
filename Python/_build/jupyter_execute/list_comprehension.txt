@@ -1,0 +1,24 @@
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+nums_quadrado = []
+
+for num in nums:
+  nums_quadrado.append(num**2) # a função append acrescenta um valor ao final da lista
+
+print(nums_quadrado)
+
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+nums_quadrado = [num**2 for num in nums]
+print(nums_quadrado)
+
+nomes = ['lala', 'lele', 'lili', 'lolo', 'ana paula']
+nomes_tamanho = [len(nome) for nome in nomes]
+print(nomes_tamanho)
+
+potencias = [0, 1, 2, 3, 4, 5, 6]
+dois_potencias = [2**p for p in potencias]
+print(dois_potencias)
+
+potencias = list(range(7))
+numeros = [100, 3, 2, 10, 4, 2, 6]
+numeros_potencias = [numeros[i]**potencias[i] for i in range(len(numeros))]
+print(numeros_potencias)

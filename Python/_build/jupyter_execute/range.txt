@@ -1,0 +1,66 @@
+filmes = ['Procurando o Nemo', 'A fuga das galinhas', 'O touro Ferdinando']
+estreias = [2003, 2000, 2017]
+
+for filme in filmes:
+  print(filme + ' (' + str(estreia) + ')')
+
+del filme # estamos deletando só porque como definimos a variável filme lá em cima ela teoricamente já existe, mas numa situação real ela não existiria
+
+filmes = ['Procurando o Nemo', 'A fuga das galinhas', 'O touro Ferdinando']
+estreias = [2003, 2000, 2017]
+
+for estreia in estreias:
+  print(filme + ' (' + str(estreia) + ')')
+
+filmes = ['Procurando o Nemo', 'A fuga das galinhas', 'O touro Ferdinando']
+estreias = [2003, 2000, 2017]
+
+print(filmes[0] + ' (' + str(estreias[0]) + ')')
+print(filmes[1] + ' (' + str(estreias[1]) + ')')
+print(filmes[2] + ' (' + str(estreias[2]) + ')')
+
+filmes = ['Procurando o Nemo', 'A fuga das galinhas', 'O touro Ferdinando']
+estreias = [2003, 2000, 2017]
+indices = [0, 1, 2]
+
+for indice in indices:
+  print(filmes[indice] + ' (' + str(estreias[indice]) + ')')
+
+for i in range(10):
+  print(i)
+
+for i in range(5, 11): # precisamos ir até o 11, pois o 10 não está incluso
+  print(i)
+
+for i in range(2, 15, 2):
+  print(i)
+
+filmes = ['Procurando o Nemo', 'A fuga das galinhas', 'O touro Ferdinando']
+estreias = [2003, 2000, 2017]
+
+for indice in range(len(filmes)): # como filmes e estreias têm o mesmo tamanho, podemos botar qualquer uma das duas aqui :D
+  print(filmes[indice] + ' (' + str(estreias[indice]) + ')')
+
+# O que o código vai imprimir?
+
+geleia = ['morango', 'jabuticaba', 'goiaba', 'amora']
+imprimir = [False, True, True, False]
+
+for i in range(len(geleia)):
+  if imprimir[i]:
+    print(geleia[i])
+
+# O que o código vai imprimir?
+
+numeros = [14, 12, 4, 131, 42, 3, 9]
+
+for i in range(2, 7, 2):
+  print(numeros[i])
+
+# O que o código vai imprimir?
+
+alfabeto = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ']
+frase = [14, -1, 9, 14, 6, 14]
+
+for i in range(len(frase)):
+  print(alfabeto[frase[i]], end = '') # quer dizer que o print não vai pular linha

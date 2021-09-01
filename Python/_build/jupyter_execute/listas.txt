@@ -1,0 +1,23 @@
+# a lista abaixo representa o numero de 
+# filmes que você viu por mês durante o ano de 2020.
+filmes_por_mes = [7, 10, 3, 15, 20, 18, 22, 32, 20, 22, 25, 30]
+
+# armazene na variável abaixo o número 
+# de filmes assistidos no primeiro mês do ano.
+primeiro_mes = 
+print(primeiro_mes)
+
+# agora, o número de filmes 
+# assistidos em dezembro.
+dezembro = 
+print(dezembro)
+
+# qual o número de filmes assistidos 
+# de junho a agosto? (complete)
+junho_a_agosto = 
+print(junho_a_agosto)
+
+# qual a diferença entre o número de filmes 
+# assistidos em maio e em setembro? (complete)
+dif_maio_setembro = 
+print(dif_maio_setembro)

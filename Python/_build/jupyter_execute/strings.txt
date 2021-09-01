@@ -1,0 +1,53 @@
+texto = 'Oi, eu sou tipo uma lista'
+print(texto[0]) # primeiro caracter da string
+print(texto[-1]) # último cadacter da string
+
+for letra in texto:
+  print(letra.upper(), end='') # upper() quer dizer que a letra vai ser maiúscula, end='' quer dizer que não vai pular linha
+
+print('\n'+texto.upper())
+
+def falar_com_bebe(texto):
+  vogais_sem_i = 'aeou'
+  texto_final = ''
+  for letra in texto:
+    if letra in vogais_sem_i:
+      texto_final += 'i'
+    else:
+      texto_final += letra
+  return texto_final
+
+print(falar_com_bebe('Bebezinho fofinho mais lindinho'))
+
+frase = 'meu nome é lala'
+palavras = frase.split(' ')
+print(palavras)
+
+email = 'lala#10TopazioFuracao@gmail.com'
+dominio = email.split('@')[1]
+print(dominio)
+
+alfabeto = 'abcdefghijklmnopqrstuvwxyz'
+print(alfabeto[2:4]) # vai imprimir as posições 2 a 3
+print(alfabeto[:5]) # vai imprimir da posição 0 até a 4
+print(alfabeto[20:]) # vai imprimir da posição 20 em diante
+
+entrada = 'a b c d e'
+saída = 'c'
+
+# seu código
+print(entrada.split(' ')[2])
+print(entrada[4])
+
+entrada = 'www.umsitequalquer.com'
+saida = 'www.umsite'
+
+# seu código
+print(entrada.split('qualquer.com')[0])
+print(entrada[:10])
+
+entrada = 'Minha mãe mandou eu escolher esse daqui'
+saida = 'escolher'
+
+# seu código
+print(entrada.split(' ')[4])

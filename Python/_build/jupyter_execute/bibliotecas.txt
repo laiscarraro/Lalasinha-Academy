@@ -1,0 +1,45 @@
+import math
+print(math.sqrt(16))
+
+from math import sqrt
+print(sqrt(16))
+
+import plotly.express
+
+nome = ['Lala', 'Mimi', 'Gigi', 'Dudu', 'Lili']
+qtd_cachorros = [0, 2, 10, 3, 5]
+
+fig = plotly.express.bar(x=nome, y=qtd_cachorros, height=400, width=700)
+fig.show()
+
+import plotly.express as px # agora podemos nos referir a essa mesma biblioteca usando só o nome "px"
+
+nome = ['Lala', 'Mimi', 'Gigi', 'Dudu', 'Lili']
+qtd_cachorros = [2, 2, 0, 3, 5]
+
+fig = px.bar(x=nome, y=qtd_cachorros, height=400, width=700) # bem mais sucinto :)
+fig.show()
+
+# Arredonde a variável a com a função "ceil" da biblioteca math (https://docs.python.org/3/library/math.html#math.ceil)
+a = 13.234
+
+from math import ceil
+print(ceil(a))
+
+# Plote o gráfico de barras dos dados abaixo usando a função "bar" da biblioteca plotly (https://plotly.com/python/bar-charts/)
+estado = ['SP', 'RJ', 'MG', 'ES', 'RS', 'RN', 'PR', 'PA', 'TO', 'AC', 'MT', 'MS', 'AM']
+numero_parques = [41, 23, 21, 23, 15, 35, 21, 25, 27, 37, 12, 7, 13]
+
+import plotly.express as px
+fig = px.bar(x=estado, y=numero_parques, color=estado)
+fig.show()
+
+import random
+
+# Utilize a função "random" da biblioteca random para sortear um número aleatório entre 0 e 1 na variável abaixo
+num_entre_0_e_1 = 10 + random.random()*5
+print(num_entre_0_e_1)
+
+# Utilize agora a função "randint" para sortear um número inteiro entre 10 e 15 na variável abaixo
+int_entre_10_e_15 = random.randint(10, 15)
+print(int_entre_10_e_15)

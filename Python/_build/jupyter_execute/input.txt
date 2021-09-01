@@ -1,0 +1,17 @@
+cateto_a = input('digite o cateto a: ')
+cateto_b = input('digite o cateto b: ')
+print('A hipotenusa é ' + str(cateto_a**2 + cateto_b**2))
+
+cateto_a = int(input('digite o cateto a: '))
+cateto_b = int(input('digite o cateto b: '))
+print('A hipotenusa é ' + str(cateto_a**2 + cateto_b**2))
+
+input()
+
+nome = input()
+print('Oi, ' + nome + '!')
+
+nome = input('Digite seu nome: ')
+altura = input('Digite sua altura: ')
+
+print('Seu nome é ' + nome + ' e você mede ' + altura + '.')

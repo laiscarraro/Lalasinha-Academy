@@ -1,0 +1,17 @@
+# Qual vai dar erro?
+
+meu_nome = 'laís'
+nomeJuliana = 'juliana'
+1nome = 'um nome'
+
+# Qual vai dar erro?
+
+nOmezZInHOHHH = 'nomezinho'
+dinheiro$ = 10
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa = '1'
+
+# Qual vai dar erro?
+
+True = 10
+definindo = 231
+int_def = 'inteiro'

@@ -1,0 +1,39 @@
+# O que essa célula vai imprimir?
+a = 3
+b = 13
+
+if a%b == 0:
+  print('a é divisível por b')
+else:
+  print('a não é divisível por b')
+
+# O que essa célula vai imprimir?
+ranking = ['Banana', 'Maçã', 'Uva', 'Goiaba']
+
+if ranking[0] == 'Uva':
+  print('A fruta vencedora pode ter caroço ou não')
+elif ranking[0] == 'Goiaba':
+  print('A fruta vencedora tem muitos caroços')
+else:
+  print('A fruta vencedora é chata')
+
+# O que essa célula vai imprimir?
+true = False
+false = True
+
+if false and false:
+  print('a b c')
+elif false == True:
+  print('a be ce')
+else:
+  print('abc')
+
+# O que essa célula vai imprimir?
+nao_tenho_carro = True
+nao_tenho_grana = True
+ficar_comigo = True
+
+if nao_tenho_carro and nao_tenho_grana and ficar_comigo:
+  print('é porque gosta')
+else:
+  print('padrão né')

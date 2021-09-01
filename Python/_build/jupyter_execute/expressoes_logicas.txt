@@ -1,0 +1,22 @@
+# Qual é falso?
+
+print(5 > 3)
+print(8 <= 2*4)
+print(4**3 > 3**4)
+
+# Qual é falso?
+
+meu_nome_é_laís = True
+eu_tenho_20_anos = False
+
+print(meu_nome_é_laís and eu_tenho_20_anos)
+print(meu_nome_é_laís or eu_tenho_20_anos)
+print(not eu_tenho_20_anos and meu_nome_é_laís)
+
+# Qual é falso?
+
+valores = [2*2 <= 1**120, '0' == 0 or 3*2 > 5, True or False, True and not True]
+
+print(valores[2] and valores[1])
+print(valores[-1] or not valores[0])
+print(not (valores[0] and valores[1]) and valores[3])

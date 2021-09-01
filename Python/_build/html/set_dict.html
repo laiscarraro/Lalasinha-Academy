@@ -1,0 +1,640 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dicionários e conjuntos &#8212; Introdução à programação com Python</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Bibliotecas" href="bibliotecas.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/python.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à programação com Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Bem-vinda/o!
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown.html">
+   O que é um notebook?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tipos_de_dados.html">
+   Tipos de dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="variaveis.html">
+   Variáveis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cast.html">
+   Conversão de tipos (
+   <em>
+    cast
+   </em>
+   )
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="listas.html">
+   Listas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="expressoes_logicas.html">
+   Expressões lógicas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="estruturas_condicionais.html">
+   Estruturas condicionais
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="estruturas_repeticao.html">
+   Estruturas de repetição:
+   <em>
+    for
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="range.html">
+   A função range
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="input.html">
+   Interação com o usuário - função
+   <em>
+    input()
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="while.html">
+   Laços com while
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="break_continue.html">
+   Break e Continue
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="list_comprehension.html">
+   List Comprehension
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="funcoes.html">
+   Funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="strings.html">
+   Manipulação de strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bibliotecas.html">
+   Bibliotecas
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Dicionários e conjuntos
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/set_dict.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/laiscarraro/Lalasinha-Academy"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/laiscarraro/Lalasinha-Academy/issues/new?title=Issue%20on%20page%20%2Fset_dict.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/laiscarraro/Lalasinha-Academy/gh-pages?urlpath=tree/https://github.com/laiscarraro/Lalasinha-Academy/Python/set_dict.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/laiscarraro/Lalasinha-Academy/blob/gh-pages/https://github.com/laiscarraro/Lalasinha-Academy/Python/set_dict.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="dicionarios-e-conjuntos">
+<h1>Dicionários e conjuntos<a class="headerlink" href="#dicionarios-e-conjuntos" title="Permalink to this headline">¶</a></h1>
+<p>Por enquando, quando falamos sobre coleções de valores, falamos apenas sobre listas. No entanto, em python existem mais 2 estruturas importantes: o conjunto (<em>set</em>) e o dicionário (<em>dictionary</em>).</p>
+<p>O conjunto é como se fosse uma lista, porém tem uma característica a mais: ele <em>não pode ter elementos repetidos</em>. Por isso, ele é uma boa ferramenta quando, por exemplo, precisamos tirar elementos repetidos de uma lista. Na célula abaixo, vamos utilizar as funções <em>list</em> (que muda o tipo do dado de entrada para o tipo lista) e <em>set</em> (que faz a conversão do tipo para conjunto).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lista_repetida</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;tapioca&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;ovo&#39;</span><span class="p">,</span> <span class="s1">&#39;cuscuz&#39;</span><span class="p">,</span> <span class="s1">&#39;lentilha&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista_repetida</span><span class="p">)</span>
+<span class="n">conjunto</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">lista_repetida</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">conjunto</span><span class="p">)</span>
+<span class="n">lista_sem_repeticao</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">conjunto</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista_sem_repeticao</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;banana&#39;, &#39;tapioca&#39;, &#39;banana&#39;, &#39;banana&#39;, &#39;ovo&#39;, &#39;cuscuz&#39;, &#39;lentilha&#39;, &#39;banana&#39;]
+{&#39;banana&#39;, &#39;cuscuz&#39;, &#39;tapioca&#39;, &#39;ovo&#39;, &#39;lentilha&#39;}
+[&#39;banana&#39;, &#39;cuscuz&#39;, &#39;tapioca&#39;, &#39;ovo&#39;, &#39;lentilha&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Perceba a diferença entre a linha do conjunto e a linha da lista: enquanto as listas utilizam colchetes ([), os conjuntos usam chaves ({). Portanto, para definirmos um conjunto à mão podemos usar as chavez e escrever como se fosse uma lista:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">conjunto</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">conjunto</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;b&#39;, &#39;e&#39;, &#39;a&#39;, &#39;c&#39;, &#39;d&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Perceba, também, que a ordem dos nossos elementos parece estar “errada”. Isso é porque, ao contrário das listas, os elementos não têm uma ordem definida dentro dos conjuntos. Por esse motivo, não conseguimos acessar um índice específico nos conjuntos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">conjunto</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Uma das vantagens de se usar sets é que podemos fazer operações entre conjuntos, como união, intersecção, diferença, etc. Veja, abaixo, como pegar a intersecção entre 2 conjuntos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{2, 3, 5}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Além dos conjuntos, temos também os <em>dicionários</em>. Os dicionários são pares de chave e valor usados para otimizar a busca por valores específicos dentro de uma coleção. Vamos supor, por exemplo, a situação abaixo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nome_dos_animais</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Alce&#39;</span><span class="p">,</span> <span class="s1">&#39;Hipopótamo&#39;</span><span class="p">,</span> <span class="s1">&#39;Dinossauro&#39;</span><span class="p">,</span> <span class="s1">&#39;Arara&#39;</span><span class="p">,</span> <span class="s1">&#39;Antílope&#39;</span><span class="p">,</span> <span class="s1">&#39;Mamute&#39;</span><span class="p">,</span> <span class="s1">&#39;Pato&#39;</span><span class="p">,</span> <span class="s1">&#39;Tartaruga&#39;</span><span class="p">,</span> <span class="s1">&#39;Girafa&#39;</span><span class="p">,</span> <span class="s1">&#39;Jararaca&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobo&#39;</span><span class="p">]</span>
+<span class="n">qtd_no_zoo</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">512</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="c1"># Suponha que queremos encontrar a posição (ou seja, o ÍNDICE) do elemento &#39;Tartaruga&#39; dentro da lista acima, para depois ver sua quantidade no zoo:</span>
+
+<span class="n">indice</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nome_dos_animais</span><span class="p">)):</span> <span class="c1"># temos que percorrer todos os itens da lista até encontrar o elemento &#39;Tartaruga&#39;</span>
+  <span class="k">if</span> <span class="n">nome_dos_animais</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Tartaruga&#39;</span><span class="p">:</span>
+    <span class="n">indice</span> <span class="o">=</span> <span class="n">i</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">indice</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Quantidade de tartarugas no zoo: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">qtd_no_zoo</span><span class="p">[</span><span class="n">indice</span><span class="p">]))</span> <span class="c1"># Podemos, então, usar o índice para procurar na lista de quantidades</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># Existe uma função que faz isso. ATENÇÃO!!!! Ela faz a mesma coisa que fizemos ali em cima!!! Não é mais eficiente!!!</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nome_dos_animais</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;Tartaruga&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Quantidade de tartarugas no zoo: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">qtd_no_zoo</span><span class="p">[</span><span class="n">nome_dos_animais</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;Tartaruga&#39;</span><span class="p">)]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+Quantidade de tartarugas no zoo: 53
+
+7
+Quantidade de tartarugas no zoo: 53
+</pre></div>
+</div>
+</div>
+</div>
+<p>A lista em que procuramos é muito pequenininha. Imagina se tentássemos fazer isso com 1 milhão de valores! Começa a ser um pouco mais complicado. Por esse motivo, podemos utilizar os <em>dicionários</em>. Veja abaixo como eles são estruturados:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">animais</span> <span class="o">=</span> <span class="p">{</span><span class="n">nome_dos_animais</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span> <span class="n">qtd_no_zoo</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nome_dos_animais</span><span class="p">))}</span>
+<span class="n">animais</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Alce&#39;: 12,
+ &#39;Antílope&#39;: 23,
+ &#39;Arara&#39;: 63,
+ &#39;Dinossauro&#39;: 0,
+ &#39;Girafa&#39;: 37,
+ &#39;Hipopótamo&#39;: 15,
+ &#39;Jararaca&#39;: 48,
+ &#39;Lobo&#39;: 2,
+ &#39;Mamute&#39;: 0,
+ &#39;Pato&#39;: 512,
+ &#39;Tartaruga&#39;: 53}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">animais</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Alce&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+    <span class="s1">&#39;Hipopótamo&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="s1">&#39;Dinossauro&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s1">&#39;Arara&#39;</span><span class="p">:</span> <span class="mi">63</span><span class="p">,</span>
+    <span class="s1">&#39;Antílope&#39;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span>
+    <span class="s1">&#39;Mamute&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s1">&#39;Pato&#39;</span><span class="p">:</span> <span class="mi">512</span><span class="p">,</span>
+    <span class="s1">&#39;Tartaruga&#39;</span><span class="p">:</span> <span class="mi">53</span><span class="p">,</span>
+    <span class="s1">&#39;Girafa&#39;</span><span class="p">:</span> <span class="mi">37</span><span class="p">,</span>
+    <span class="s1">&#39;Jararaca&#39;</span><span class="p">:</span> <span class="mi">48</span><span class="p">,</span>
+    <span class="s1">&#39;Lobo&#39;</span><span class="p">:</span> <span class="mi">2</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Cada ítem de um dicionário tem uma <em>chave</em> (key) e um <em>valor</em> (value). É fácil gerar, a partir de um dicionário, uma lista de chaves e uma lista de valores, utilizando as funções “.keys()” e “.values()”:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">animais</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">animais</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;Alce&#39;, &#39;Hipopótamo&#39;, &#39;Dinossauro&#39;, &#39;Arara&#39;, &#39;Antílope&#39;, &#39;Mamute&#39;, &#39;Pato&#39;, &#39;Tartaruga&#39;, &#39;Girafa&#39;, &#39;Jararaca&#39;, &#39;Lobo&#39;])
+dict_values([12, 15, 0, 63, 23, 0, 512, 53, 37, 48, 2])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para acessar o VALOR de um elemento, apenas precisamos acessar o dicionário como se fosse uma lista, mas ao invés do índice, podemos escrever a CHAVE:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Quantidade de tartarugas no zoo: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">animais</span><span class="p">[</span><span class="s1">&#39;Tartaruga&#39;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Quantidade de tartarugas no zoo: 53
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para percorrer todos os ítens:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">animais</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Quantidade de &#39;</span> <span class="o">+</span> <span class="n">animal</span> <span class="o">+</span> <span class="s1">&#39;s no zoo: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">animais</span><span class="p">[</span><span class="n">animal</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Quantidade de Alces no zoo: 12
+Quantidade de Hipopótamos no zoo: 15
+Quantidade de Dinossauros no zoo: 0
+Quantidade de Araras no zoo: 63
+Quantidade de Antílopes no zoo: 23
+Quantidade de Mamutes no zoo: 0
+Quantidade de Patos no zoo: 512
+Quantidade de Tartarugas no zoo: 53
+Quantidade de Girafas no zoo: 37
+Quantidade de Jararacas no zoo: 48
+Quantidade de Lobos no zoo: 2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Por enquanto, é só! Agora, vamos fazer alguns exercícios?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Percorra o conjunto abaixo e imprima seus elementos:</span>
+<span class="n">conj</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1234</span><span class="p">,</span> <span class="mi">110984</span><span class="p">,</span> <span class="mi">5192</span><span class="p">,</span> <span class="mi">5092</span><span class="p">,</span> <span class="mi">14872</span><span class="p">,</span> <span class="mi">4112</span><span class="p">,</span> <span class="mi">5904</span><span class="p">,</span> <span class="mi">5150</span><span class="p">,</span> <span class="mi">5783</span><span class="p">,</span> <span class="mi">394</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">conj</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5092
+110984
+5192
+394
+4112
+5904
+1234
+5783
+14872
+5150
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imprima a união dos dois conjuntos a seguir:</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;banana nanica&#39;</span><span class="p">,</span> <span class="s1">&#39;banana verde&#39;</span><span class="p">,</span> <span class="s1">&#39;banana maçã&#39;</span><span class="p">,</span> <span class="s1">&#39;banana prata&#39;</span><span class="p">}</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;maçã&#39;</span><span class="p">,</span> <span class="s1">&#39;maçã verde&#39;</span><span class="p">,</span> <span class="s1">&#39;maçã verde verde&#39;</span><span class="p">,</span> <span class="s1">&#39;maçã normal verde&#39;</span><span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;banana nanica&#39;, &#39;maçã&#39;, &#39;maçã verde&#39;, &#39;maçã verde verde&#39;, &#39;banana prata&#39;, &#39;maçã normal verde&#39;, &#39;banana maçã&#39;, &#39;banana&#39;, &#39;banana verde&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imprima o valor no dicionário abaixo com a chave 5:</span>
+<span class="n">musicas</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">12</span><span class="p">:</span> <span class="s1">&#39;alecrim, alecrim dourado&#39;</span><span class="p">,</span>
+    <span class="mi">20</span><span class="p">:</span> <span class="s1">&#39;se essa rua, se essa rua fosse minha&#39;</span><span class="p">,</span>
+    <span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;nana nenê que a cuca vem pegar&#39;</span><span class="p">,</span>
+    <span class="mi">5</span><span class="p">:</span> <span class="s1">&#39;cabeça, ombro, joelho e pé (joelho e pé!)&#39;</span><span class="p">,</span>
+    <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;dirigindo meu carro, dirigindo meu carro, eu vou à praia dirigindo o meu carro&#39;</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">musicas</span><span class="p">[</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dirigindo meu carro, dirigindo meu carro, eu vou à praia dirigindo o meu carro
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Percorra o dicionário abaixo e imprima seus elementos no formato &quot;chave: valor&quot;</span>
+<span class="n">dicionario</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Luminária&#39;</span><span class="p">:</span> <span class="s1">&#39;Móvel que ilumina a casa&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Cachorro&#39;</span><span class="p">:</span> <span class="s1">&#39;Bichinho de estimação&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Boneca&#39;</span><span class="p">:</span> <span class="s1">&#39;Brinquedo de crianças que simula uma pessoa&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Batata&#39;</span><span class="p">:</span> <span class="s1">&#39;Tubérculo que fica muito bom em qualquer coisa&#39;</span>
+<span class="p">}</span>
+
+<span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="s1">&#39;: &#39;</span><span class="o">+</span><span class="n">dicionario</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">dicionario</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Luminária: Móvel que ilumina a casa&#39;,
+ &#39;Cachorro: Bichinho de estimação&#39;,
+ &#39;Boneca: Brinquedo de crianças que simula uma pessoa&#39;,
+ &#39;Batata: Tubérculo que fica muito bom em qualquer coisa&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "laiscarraro/Lalasinha-Academy",
+            ref: "gh-pages",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="bibliotecas.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Bibliotecas</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Laís Carraro Leme Cavalheiro<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

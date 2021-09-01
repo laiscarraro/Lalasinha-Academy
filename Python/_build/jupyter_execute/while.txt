@@ -1,0 +1,47 @@
+for i in range(10, 0, -1):
+  print(str(i)+'!')
+print('Feliz ano novo!')
+
+#@title Chatbot (código ultra secreto)
+nome = input('Oi! Qual é o seu nome?\n')
+
+while nome != 'tchau':
+  print('Que legal! O que é ' + nome + '?')
+  nome = input()
+
+i = 10
+while i > 0:
+  print(str(i) + '!')
+  i = i - 1
+print('Feliz ano novo!')
+
+i = 10
+while i > 0:
+  print(str(i) + '!')
+print('Feliz ano novo!')
+
+# Evite um loop infinito!
+i = 0
+while i < 11:
+  if i%2 == 0:
+    print('bem me quer')
+  else:
+    print('mal me quer')
+  i = i + 1
+
+# Evite um loop infinito!
+finalizado = False
+while not finalizado:
+  print('ta finalizado?')
+  resposta = input()
+  if resposta == 'sim':
+    finalizado = True
+  else:
+    finalizado = False
+
+# Evite um loop infinito!
+a = 0
+while a < 10:
+  print('0 é menor que 10')
+  a += 1
+print('0 ainda é menor que 10 mas o loop acabou')

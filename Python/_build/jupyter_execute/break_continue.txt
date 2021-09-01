@@ -1,0 +1,34 @@
+resp = ''
+while resp != 'tchau':
+  print('Oi, eu sou um chatbot, e vc?')
+  resp = input()
+print('Tchau!')
+
+resp = ''
+while True:
+  print('Oi, eu sou um chatbot, e vc?')
+  resp = input()]
+  if resp == 'tchau':
+    break
+print('Tchau!')
+
+resp = ''
+while True:
+  print('Oi, eu sou um chatbot, e vc?')
+  resp = input()
+  if resp == 'tchau':
+    break
+  elif resp == 'sim':
+    # não fazer nada
+#print('Tchau!')
+
+resp = ''
+while True:
+  print('Oi, eu sou um chatbot, e vc?')
+  resp = input()
+  if resp == 'tchau':
+    break
+  elif resp == 'sim':
+    continue
+  print('Legal!')
+print('Tchau!')

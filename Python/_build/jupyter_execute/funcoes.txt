@@ -1,0 +1,92 @@
+nome = 'Maria'
+notas = [10, 8, 9, 10]
+soma = 0
+for nota in notas:
+  soma += nota
+media = soma/len(notas)
+print(nome + ': ' + str(media))
+
+nome = 'Maria'
+notas = [10, 8, 9, 10]
+soma = 0
+for nota in notas:
+  soma += nota
+media = soma/len(notas)
+print(nome + ': ' + str(media))
+
+nome = 'João'
+notas = [8, 9, 7, 8]
+soma = 0
+for nota in notas:
+  soma += nota
+media = soma/len(notas)
+print(nome + ': ' + str(media))
+
+nome = 'Alice'
+notas = [7, 8, 9, 10]
+soma = 0
+for nota in notas:
+  soma += nota
+media = soma/len(notas)
+print(nome + ': ' + str(media))
+
+def f(x):
+  return x**2
+
+f(2)
+
+for i in range(10):
+  print(f(i))
+
+def media_aluno(nome, notas):
+  soma = 0
+  for nota in notas:
+    soma += nota
+  media = soma/len(notas)
+  print(nome + ': ' + str(media))
+
+media_aluno('Maria', [10, 8, 9, 10])
+media_aluno('João', [8, 9, 7, 8])
+media_aluno('Alice', [7, 8, 9, 10])
+
+media_aluno(notas = [10, 8, 9, 10], nome = 'Maria')
+
+def maior_numero(lista):
+  maior = 0
+  for numero in lista:
+    if numero > maior:
+      maior = numero
+  return maior
+
+# Nome da função: maior_numero
+# Parâmetro(s) da função: lista
+# Exemplo de chamada:
+maior_numero([1, 2, 3])
+# O que espera-se que essa chamada vai retornar: 3
+
+def funcao_inutil(parametro_inutil1, parametro_inutil2, parametro_inutil3):
+  processamento_inutil = [1, 2, 3, 4, 5, 6]
+  processamento_inutil_mult = [p*parametro_inutil1 for p in processamento_inutil]
+  processamento_inutil_final = []
+  for p in processamento_inutil_mult:
+    processamento_inutil_final.append(p//parametro_inutil2)
+  return 'batata'
+
+# Nome da função: funcao_inutil
+# Parâmetro(s) da função: parametro_inutil1, parametro_inutil2, parametro_inutil3
+# Exemplo de chamada: 
+funcao_inutil(1, 2, 'inutil')
+# O que espera-se que essa chamada vai retornar: 'batata'
+
+def conta_par(lista):
+  pares = 0
+  for i in lista:
+    if i%2 == 0:
+      pares += 1
+  return pares
+
+# Nome da função: conta_par
+# Parâmetro(s) da função: lista
+# Exemplo de chamada:
+conta_par([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+# O que espera-se que essa chamada vai retornar: 5

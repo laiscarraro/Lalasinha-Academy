@@ -5,5 +5,19 @@ format: jb-book
 root: intro
 chapters:
 - file: markdown
-- file: notebooks
-- file: teste
+- file: tipos_de_dados
+- file: variaveis
+- file: cast
+- file: listas
+- file: expressoes_logicas
+- file: estruturas_condicionais
+- file: estruturas_repeticao
+- file: range
+- file: input
+- file: while
+- file: break_continue
+- file: list_comprehension
+- file: funcoes
+- file: strings
+- file: bibliotecas
+- file: set_dict

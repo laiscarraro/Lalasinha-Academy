@@ -1,0 +1,579 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funções &#8212; Introdução à programação com Python</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Manipulação de strings" href="strings.html" />
+    <link rel="prev" title="List Comprehension" href="list_comprehension.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/python.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introdução à programação com Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Bem-vinda/o!
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown.html">
+   O que é um notebook?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tipos_de_dados.html">
+   Tipos de dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="variaveis.html">
+   Variáveis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cast.html">
+   Conversão de tipos (
+   <em>
+    cast
+   </em>
+   )
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="listas.html">
+   Listas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="expressoes_logicas.html">
+   Expressões lógicas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="estruturas_condicionais.html">
+   Estruturas condicionais
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="estruturas_repeticao.html">
+   Estruturas de repetição:
+   <em>
+    for
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="range.html">
+   A função range
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="input.html">
+   Interação com o usuário - função
+   <em>
+    input()
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="while.html">
+   Laços com while
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="break_continue.html">
+   Break e Continue
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="list_comprehension.html">
+   List Comprehension
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="strings.html">
+   Manipulação de strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bibliotecas.html">
+   Bibliotecas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="set_dict.html">
+   Dicionários e conjuntos
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/funcoes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/laiscarraro/Lalasinha-Academy"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/laiscarraro/Lalasinha-Academy/issues/new?title=Issue%20on%20page%20%2Ffuncoes.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/laiscarraro/Lalasinha-Academy/gh-pages?urlpath=tree/https://github.com/laiscarraro/Lalasinha-Academy/Python/funcoes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/laiscarraro/Lalasinha-Academy/blob/gh-pages/https://github.com/laiscarraro/Lalasinha-Academy/Python/funcoes.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="funcoes">
+<h1>Funções<a class="headerlink" href="#funcoes" title="Permalink to this headline">¶</a></h1>
+<p>Estamos sempre falando sobre como código repetido não é um bom sinal, e que em python sempre tem um jeito mais compacto de fazer algo. Vamos, então, supor a seguinte situação:</p>
+<p>Um professor tem 30 alunos e gostaria de calcular a média das notas de todos eles e imprimir o nome do aluno com sua média final, para cada aluno. O problema é que ele não tem esses dados numa única lista, então não tem como percorrer com um for só… Como isso ficaria?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;Maria&#39;</span>
+<span class="n">notas</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">soma</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">nota</span> <span class="ow">in</span> <span class="n">notas</span><span class="p">:</span>
+  <span class="n">soma</span> <span class="o">+=</span> <span class="n">nota</span>
+<span class="n">media</span> <span class="o">=</span> <span class="n">soma</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">notas</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nome</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">media</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Funcionar, funciona, mas… como faríamos para, por exemplo, imprimir a média de 3 alunos diferentes?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;Maria&#39;</span>
+<span class="n">notas</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">soma</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">nota</span> <span class="ow">in</span> <span class="n">notas</span><span class="p">:</span>
+  <span class="n">soma</span> <span class="o">+=</span> <span class="n">nota</span>
+<span class="n">media</span> <span class="o">=</span> <span class="n">soma</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">notas</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nome</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">media</span><span class="p">))</span>
+
+<span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;João&#39;</span>
+<span class="n">notas</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">soma</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">nota</span> <span class="ow">in</span> <span class="n">notas</span><span class="p">:</span>
+  <span class="n">soma</span> <span class="o">+=</span> <span class="n">nota</span>
+<span class="n">media</span> <span class="o">=</span> <span class="n">soma</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">notas</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nome</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">media</span><span class="p">))</span>
+
+<span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;Alice&#39;</span>
+<span class="n">notas</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">soma</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">nota</span> <span class="ow">in</span> <span class="n">notas</span><span class="p">:</span>
+  <span class="n">soma</span> <span class="o">+=</span> <span class="n">nota</span>
+<span class="n">media</span> <span class="o">=</span> <span class="n">soma</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">notas</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nome</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">media</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Com 7 linhas de código para cada aluno mais uma linha de espaço, teríamos 239 linhas de código para calcular a nota de todos os 30 alunos. Pouquinho, né? Será que tem como fazer melhor?</p>
+<p>Tem sim! Com uma coisa chamada <em>função</em>. Lembra da função de matemática, na forma <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> e coisas assim? É quase igual! Vamos ver o vocabulário de funções que você já deve conhecer:</p>
+<ul class="simple">
+<li><p>Uma função recebe dados de <em>entrada</em>, manipula-os e devolve uma <em>saída</em>, que é o resultado do processamento das entradas.</p></li>
+<li><p>A <em>declaração</em> ou <em>DEFinição</em> de uma função ocorre quando DEFinimos como será este processamento. Por exemplo, ao escrevermos que <span class="math notranslate nohighlight">\(f(x) = x^2\)</span>, estamos dizendo que qualquer número que entrar nessa função sairá ao quadrado.</p></li>
+<li><p>Os <em>parâmetros</em> de uma função são as “letrinhas” que usamos na definição da função, que são <em>representações</em> abstratas dos dados de entrada. Por exemplo, na nossa função <span class="math notranslate nohighlight">\(f(x) = x^2\)</span>, o <span class="math notranslate nohighlight">\(x\)</span> é o que representa o nosso número de entrada. Da mesma forma, na função <span class="math notranslate nohighlight">\(f(x, y, z) = x^2 + 2y^3 + 3z\)</span>, nossos parâmetros são <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span> e <span class="math notranslate nohighlight">\(z\)</span>, pois eles representam os números que vão entrar na nossa função.</p></li>
+<li><p>A <em>chamada</em> de uma função é quando nós efetivamente utilizamos essa função com valores reais. Se usarmos a nossa definição de <span class="math notranslate nohighlight">\(f(x) = x^2\)</span>, por exemplo, uma chamada dessa função poderia ser <span class="math notranslate nohighlight">\(f(2)\)</span>. Nesse caso, <span class="math notranslate nohighlight">\(f(2) = 2^2 = 4\)</span>. Poderíamos chamar essa função com quaisquer números (<span class="math notranslate nohighlight">\(f(3), f(15), f(123)\)</span>, etc). Podemos chamar também nosso <span class="math notranslate nohighlight">\(f(x, y, z)\)</span>: em <span class="math notranslate nohighlight">\(f(1, 2, 3)\)</span> temos que <span class="math notranslate nohighlight">\(x = 1\)</span>, <span class="math notranslate nohighlight">\(y = 2\)</span> e <span class="math notranslate nohighlight">\(z = 3\)</span>. O resultado seria, então, <span class="math notranslate nohighlight">\(1^2 + 2*2^3 + 3*3 = 1 + 16 + 9 = 26\)</span>.</p></li>
+<li><p>Por fim, os <em>argumentos</em> são os dados específicos que utilizamos na chamada de uma função. Na nossa chamada de <span class="math notranslate nohighlight">\(f(2)\)</span>, por exemplo, nosso argumento era o número <span class="math notranslate nohighlight">\(2\)</span>. Já na chamada de <span class="math notranslate nohighlight">\(f(1, 2, 3)\)</span>, nossos argumentos eram <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(2\)</span> e <span class="math notranslate nohighlight">\(3\)</span>.</p></li>
+</ul>
+<p>Ufa! Bastante coisa, né? O bom é que todas essas definições são aplicáveis também a funções em python! Vamos ver como fazer funções em python na prática? Abaixo, temos a DEFinição de uma função (rsrs):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>O nome da nossa função é f, temos apenas um parâmetro, que é o x, e o que essa função <em>retorna</em> é o número x ao quadrado. Opa! Essa é a mesma função de matemática que tínhamos usado como exemplo (<span class="math notranslate nohighlight">\(f(x) = x^2\)</span>)!</p>
+<p>A definição de funções em python sempre terá essa mesma estrutura:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nome_da_funcao</span><span class="p">(</span><span class="n">parametros</span><span class="p">):</span>
+  <span class="c1"># processamento da entrada (pode ter várias linhas e vários parâmetros)</span>
+  <span class="k">return</span> <span class="n">resultado_do_processamento</span>
+</pre></div>
+</div>
+<p>Legal! Agora, vamos chamar essa função pra ver se ela funciona mesmo?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<p>Funciona! E sabe o melhor? Podemos chamar ela várias vezes sem precisar escrever o código outra vez!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+4
+9
+16
+25
+36
+49
+64
+81
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nem dá pra perceber muita mudança porque nossa função tinha literalmente só 2 linhas, mas como ficaria para o nosso exemplo inicial? Vamos criar uma função para calcular a média de um aluno:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">media_aluno</span><span class="p">(</span><span class="n">nome</span><span class="p">,</span> <span class="n">notas</span><span class="p">):</span>
+  <span class="n">soma</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">for</span> <span class="n">nota</span> <span class="ow">in</span> <span class="n">notas</span><span class="p">:</span>
+    <span class="n">soma</span> <span class="o">+=</span> <span class="n">nota</span>
+  <span class="n">media</span> <span class="o">=</span> <span class="n">soma</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">notas</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">nome</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">media</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>OBS.: Nem sempre precisamos utilizar o <em>return</em>. Nesse caso, não queremos retornar nenhum valor depois do processamento: note que só queremos <em>imprimir na tela</em> o resultado desse processamento. Isso pode ser um pouco abstrato ainda, mas por enquanto só tenha em mente que às vezes não queremos retornar valores das nossas funções. Esse tipo de função, que não retorna nada, é chamada de função <em>void</em>.</p>
+<p>Pronto! Agora que temos a definição da nossa função, podemos chamá-la para cada aluno:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">media_aluno</span><span class="p">(</span><span class="s1">&#39;Maria&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">media_aluno</span><span class="p">(</span><span class="s1">&#39;João&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+<span class="n">media_aluno</span><span class="p">(</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">media_aluno</span><span class="p">(</span><span class="n">notas</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="n">nome</span> <span class="o">=</span> <span class="s1">&#39;Maria&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As chamadas de função em python sempre terão esse mesmo formato:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nome_da_funcao</span><span class="p">(</span><span class="n">argumentos</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Com 6 linhas de definição + 3 linhas para chamar a função, temos 9 linhas contra 23. Bem mais compacto, né? :)</p>
+<p>Vamos praticar um pouco! Para cada função abaixo, diga qual é o seu nome, quais são seus parâmetros, escreva um exemplo de chamada e diga o que ela vai retornar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">maior_numero</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+  <span class="n">maior</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">numero</span> <span class="o">&gt;</span> <span class="n">maior</span><span class="p">:</span>
+      <span class="n">maior</span> <span class="o">=</span> <span class="n">numero</span>
+  <span class="k">return</span> <span class="n">maior</span>
+
+<span class="c1"># Nome da função: maior_numero</span>
+<span class="c1"># Parâmetro(s) da função: lista</span>
+<span class="c1"># Exemplo de chamada:</span>
+<span class="n">maior_numero</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="c1"># O que espera-se que essa chamada vai retornar: 3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcao_inutil</span><span class="p">(</span><span class="n">parametro_inutil1</span><span class="p">,</span> <span class="n">parametro_inutil2</span><span class="p">,</span> <span class="n">parametro_inutil3</span><span class="p">):</span>
+  <span class="n">processamento_inutil</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+  <span class="n">processamento_inutil_mult</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="o">*</span><span class="n">parametro_inutil1</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">processamento_inutil</span><span class="p">]</span>
+  <span class="n">processamento_inutil_final</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">processamento_inutil_mult</span><span class="p">:</span>
+    <span class="n">processamento_inutil_final</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="o">//</span><span class="n">parametro_inutil2</span><span class="p">)</span>
+  <span class="k">return</span> <span class="s1">&#39;batata&#39;</span>
+
+<span class="c1"># Nome da função: funcao_inutil</span>
+<span class="c1"># Parâmetro(s) da função: parametro_inutil1, parametro_inutil2, parametro_inutil3</span>
+<span class="c1"># Exemplo de chamada: </span>
+<span class="n">funcao_inutil</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;inutil&#39;</span><span class="p">)</span>
+<span class="c1"># O que espera-se que essa chamada vai retornar: &#39;batata&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">conta_par</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+  <span class="n">pares</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">pares</span> <span class="o">+=</span> <span class="mi">1</span>
+  <span class="k">return</span> <span class="n">pares</span>
+
+<span class="c1"># Nome da função: conta_par</span>
+<span class="c1"># Parâmetro(s) da função: lista</span>
+<span class="c1"># Exemplo de chamada:</span>
+<span class="n">conta_par</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="c1"># O que espera-se que essa chamada vai retornar: 5</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "laiscarraro/Lalasinha-Academy",
+            ref: "gh-pages",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="list_comprehension.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">List Comprehension</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="strings.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Manipulação de strings</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Laís Carraro Leme Cavalheiro<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
